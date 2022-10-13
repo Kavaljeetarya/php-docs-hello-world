@@ -2,7 +2,7 @@
 $host = 'appdbmysqlserver.mysql.database.azure.com';
 $username = 'fpbkyncxoo';
 $password = 'BS316RHI8702807V$';
-$db_name = testdb';
+$db_name = 'testdb';
 
 //Initializes MySQLi
 $conn = mysqli_init();
@@ -14,11 +14,11 @@ if (mysqli_connect_errno())
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-//Run the Select query
-printf("Reading data from table: \n");
-$res = mysqli_query($conn, 'SELECT * FROM Products');
-while ($row = mysqli_fetch_assoc($res))
-{
-    var_dump($row);
-}
+// //Run the Select query
+// printf("Reading data from table: \n");
+// $res = mysqli_query($conn, 'SELECT * FROM Products');
+// while ($row = mysqli_fetch_assoc($res))
+// {
+//     var_dump($row);
+// }
 ?>
