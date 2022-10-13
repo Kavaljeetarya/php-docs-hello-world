@@ -1,5 +1,5 @@
 <?php
-    echo "Hello Azure! \n";
+    echo "Hello Azure! \n"."</br>";
     
 $host = 'njkmserver.mysql.database.azure.com';
 $username = 'njkmserveruser';
@@ -21,6 +21,9 @@ printf("Reading data from table: \n");
 $res = mysqli_query($conn, 'SELECT * FROM dinner');
 while ($row = mysqli_fetch_assoc($res))
 {
-   echo $row['dinnername'];
+    echo $row['dinnerid']." ";
+    echo $row['dinnername']." ";
+    echo $row['dinnerday']." ";
+    echo $row['dinneraddress']."</br>";
 }
 ?>
