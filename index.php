@@ -21,6 +21,6 @@ printf("Reading data from table: \n");
 $res = mysqli_query($conn, 'SELECT * FROM dinner');
 while ($row = mysqli_fetch_assoc($res))
 {
-   var_dump($row);
+   echo $row['dinnername'];
 }
 ?>
