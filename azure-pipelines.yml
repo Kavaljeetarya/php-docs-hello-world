@@ -1,0 +1,19 @@
+# PHP pipeline
+# Build and test PHP projects
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/php
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: PHP@0
+  inputs:
+    version: '7.4'
+    extensionPhpUnit: '6.5'
+
+- script: |
+    php index.php
+  displayName: 'Execute PHP script'
